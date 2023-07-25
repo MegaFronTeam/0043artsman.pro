@@ -8,6 +8,8 @@ include ../blocks/sContact/_sContact.pug
 include ../blocks/sForm/_sForm.pug
 include ../blocks/sForm/_sForm.pug
 include ../blocks/sCatalog/_sCatalog.pug
+include ../blocks/header/_header.pug
+include ../blocks/top-nav/_top-nav.pug
 
 block variables
 	- let  mainPage= 'main-page' 
@@ -20,14 +22,10 @@ block pagecontent
 	//- +mob-mnu()
 	
 	
-	+parts('header')
+	+header()
+		+top-nav()
 	main
-		.ratiod
 		+headerBlock 
-		+sCatalog
-		+sForm()
-		+sContact()
-		
 	+parts('footer')
       
 

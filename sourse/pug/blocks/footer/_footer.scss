@@ -1,12 +1,15 @@
 .footer {
-		
+		color: $secondary;
 	margin-top: auto;
 // --sPT: #{rem()};
 	// --sPB: #{rem()};
 	// --sTPB: #{rem()};
+	.row{
+		align-items: center;
+		--bs-gutter-y: 24px;
+	}
 	&__row{
 		// --bs-gutter-x: #{rem()};
-		--bs-gutter-y: var(--bs-gutter-x);
 
 	}
 	.section-title{
@@ -20,6 +23,51 @@
 	}
 	&__slide{
 		height: auto;
+	}
+	&__text{
+
+		@include media-breakpoint-up(lg) {
+			margin-left: auto;
+			margin-right: auto;
+			
+			max-width: rem(260);
+			text-align: center;
+			max-width: rem(260);
+		}
+		max-width: 330px;
+		line-height: 125%; /* 20px */
+	}
+	&__btn.btn-outline-primary{ 
+		width: 100%;
+		max-width: rem(220);
+		border-radius: 40px;
+		padding: 0 rem(16);
+		height: var(--btn-h);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-left: auto;
+	}
+	&__btn.btn-outline-white{
+		width: 100%;
+		border-radius: rem(18px);
+		padding: 0 rem(16);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		position: relative;
+		@include media-breakpoint-up(md) {
+			
+			height:rem(96);
+			margin-top: rem(96);
+		}
+		height: 70px;
+		margin-top: rem(36);
+		margin-bottom: rem(24);
+	}
+
+	&__row{
+		min-height: rem(70);
 	}
 // 
 @include media-breakpoint-up(xl) {}
@@ -59,4 +107,37 @@
 @include media-breakpoint-down(sm) {}
 
 @include media-breakpoint-down(xs) {}
+}
+
+
+
+.cookie-block{
+	font-size: rem(12);
+	text-align: center;
+	padding: rem(16) rem(22);
+	max-width: rem(744);
+	position: relative;
+	z-index: 2;
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+	.icon{
+		cursor: pointer;
+		position: absolute;
+		right: rem(12);
+		top: rem(12);
+		font-size: rem(12);
+	}
+	&::before{
+		content: '';
+		@include a-cent;
+		z-index: -1;
+		background: var(--light-black-72, rgba(22, 22, 22, 0.72));
+		/* Blur */
+		backdrop-filter: blur(7.5px);
+		border-radius: 12px;
+	}
+	a{
+		color: $body-color;
+	}
 }

@@ -1,7 +1,7 @@
  
 	  
 .soc{
-	@include roww(10px, m);
+	@include roww(rem(8px), 0, m);
 	display: flex;
 	&__item{
 		text-decoration: none !important; 
@@ -9,14 +9,24 @@
 		@include mt;
 		display: grid;
 		place-items: center;
+		 
+		width:var(--btn-h);
+		height:var(--btn-h);
+		position: relative;
+		z-index: 2;
+		color: $body-color;
+		.btn__bg{
+			border-radius: 50%;
+		}
 		&:hover{
+			--sc: 1.14;
 		 	// box-shadow: 0 0 33px 0px rgba(255, 83, 0, 0.16);
 			// opacity: .6 ;
 		}
 		
 	}
 	.icon{
-		font-size: rem(30);
+		font-size: rem(24);
 	}
 
 

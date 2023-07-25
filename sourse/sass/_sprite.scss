@@ -12,10 +12,25 @@
 	font-size:calc( var(--h) / 10 * 1rem);
 	width: calc(22 / var(--h) *1em );
 }
+.icon-be {
+	--h: 20;
+	font-size:calc( var(--h) / 10 * 1rem);
+	width: calc(20 / var(--h) *1em );
+}
 .icon-check {
 	--h: 27;
 	font-size:calc( var(--h) / 10 * 1rem);
 	width: calc(27 / var(--h) *1em );
+}
+.icon-close {
+	--h: 12;
+	font-size:calc( var(--h) / 10 * 1rem);
+	width: calc(12 / var(--h) *1em );
+}
+.icon-dropfile {
+	--h: 20;
+	font-size:calc( var(--h) / 10 * 1rem);
+	width: calc(20 / var(--h) *1em );
 }
 .icon-fb {
 	--h: 24;
@@ -28,9 +43,9 @@
 	width: calc(24 / var(--h) *1em );
 }
 .icon-telegram {
-	--h: 16;
+	--h: 20;
 	font-size:calc( var(--h) / 10 * 1rem);
-	width: calc(16 / var(--h) *1em );
+	width: calc(20 / var(--h) *1em );
 }
 .icon-viber {
 	--h: 16;

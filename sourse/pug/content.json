@@ -1,16 +1,12 @@
 {
 	"nav":[
-		{ "name":"Наши работы", "url":"#"},
-		{	"name":"Цены", "url":"#"},
-		{"name":"Калькулятор", "url":"#"},
-		{"name":"Акции", "url":"#"} ,
-		{
-			"name":"Заказать", 
-			"url":"#"
-			}
+		{ "name":"Проекты", "url":"#"},
+		{	"name":"О студии", "url":"#"},
+		{"name":"Услуги", "url":"#","label": "HOT"},
+		{"name":"Контакты", "url":"#"}
 	],
 	"social":[
-		"fb","instagram","telegram"
+		"telegram","dropfile","be"
 	],
 	"index":{
 		"head": {

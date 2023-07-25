@@ -1,9 +1,21 @@
 mixin footer()
-	+b.FOOTER.footer.section
+	+b.FOOTER.footer
 		.container
 			.row
-				.col
-					
-				.col Footer
-				.col
-				.col-auto
+				.col-lg-auto
+					+e.text Создаем яркие веб-сайты и&nbsp;брендинг на&nbsp;которые обращают внимание
+				.col-lg.col-auto.order-lg-first
+					+soc()
+				.col.text-end
+					+e.btn.btn.btn-outline-primary(href="#") Заполнить бриф
+						span.btn__bg
+			+e.btn.btn.btn-outline-white(href="#")
+				span.btn__bg
+				| Смотреть проекты
+			+e.row.row
+				.col-lg-auto.col © 2014–2023 Михаил&nbsp;Ишметов
+				.col-lg-auto.col.order-lg-last.text-end
+					+e.link(href="#").text-body Политика конфиденциальности
+				.col-lg
+					.cookie-block(style="display: none") Сайт использует cookie-файлы, чтобы сделать ваше пребывание на&nbsp;нем максимально удобным. Оставаясь на&nbsp;сайте, вы&nbsp;даете свое согласие на&nbsp;обработку персональных данных в&nbsp;соответствии&nbsp;с #[a(href="#" target="_blank") Политикой конфиденциальности].
+						+icon("close")

@@ -44,8 +44,11 @@
   },
   "dependencies": {
     "@fancyapps/ui": "^5.0.16",
+    "@splidejs/splide": "^4.1.4",
+    "@splidejs/splide-extension-auto-scroll": "^0.5.3",
     "inputmask": "^5.0.8",
     "jquery": "^3.7.0",
+    "lottie-web": "^5.12.2",
     "swiper": "^10.0.4"
   }
 }

@@ -1,11 +1,13 @@
 mixin headerBlock()
 	// start headerBlock
-	+b.headerBlock.section#headerBlock&attributes(attributes)
+	+b.headerBlock#headerBlock&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 headerBlock ds dfsdfdsfsd
-				+icon('telegram')
-				+iconC('telegram')
-			.row
-						
+			+e.img-wrap
+				img(src="img/panda-cover.jpg", alt="").res-i
+			+e.slider-wrap()
+				+e.slider--js(class="splide" role="group")
+					.splide__track 
+						.splide__list
+							+e.slide.splide__slide
+								h1  Свои люди в&nbsp;digital упаковке бизнеса
 	// end headerBlock

@@ -1,12 +1,6 @@
 .menu{
-	@include media-breakpoint-up(lg) {
-
-		display: flex;
-		text-align: center;
-		@include roww(20px);
-		flex-wrap: wrap;
-	}
-
+	 
+	text-align: end;
 	list-style: none;
 	position: relative;
 	margin-bottom: 0;
@@ -17,10 +11,37 @@
 		// margin-right: 0;
 		padding: 0;
 	}
-	a{
-		display: block;
-		padding: rem(20) calc(var(--bs-gutter-x) / 2);
+	a{ 
+		display: inline-block;
+		position: relative;
+		overflow: hidden;
+		color: var(--white, #F6F4EA);
+		height: rem(28);
+		margin: rem(2) 0;
+		.link-inner{
+			position: relative;
+			padding: rem(2) 0;
+			display: flex;
+			align-items: center;
+			transform: translate3d(0,0,0);
+			@include mt;
+		}
+		&:hover{
+			.link-inner{
+				transform: translateY(-100%);
+			}
+			
+		}
+
 	}
+}
+.link-label{
+	margin-left: rem(12);
+	text-transform: uppercase;
+	font-size: 10px;
+	padding: 2px 7px;
+	background-color: $primary;
+	border-radius: 4px;
 }
 
 
