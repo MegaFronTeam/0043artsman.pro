@@ -3,7 +3,7 @@ mixin headerBlock()
 	+b.headerBlock#headerBlock&attributes(attributes)
 		.container
 			+e.img-wrap
-				img(src="img/panda-cover.jpg", alt="").res-i
+				+pic("panda-cover.jpg")
 			+e.slider-wrap()
 				+e.slider--js(class="splide" role="group")
 					.splide__track 
