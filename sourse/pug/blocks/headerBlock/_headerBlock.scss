@@ -7,13 +7,14 @@
 	@include media-breakpoint-up(lg) {
 		--max: calc(var(--vh, 1vh) * 100 - 187px);
 		max-height: var(--max);
+		--sp-y: 5vh;
 	}
+	--sp-y: 18px;
 
 	text-align: center;
 	flex-grow: 1; 
 	position: relative;
 	align-items: center;
-	--sp-y: 5vh;
 	padding-top: var(--sp-y);
 	padding-bottom: var(--sp-y);
 	&__img-wrap{
@@ -86,12 +87,18 @@
 		// white-space: nowrap;
 	}
 	@include media-breakpoint-down(lg) {
-		&__slide{
-			&:not([data-swiper-slide-index="0"]){
+
+		.splide__slide{
+			width: 100% !important;
+		}
+		.splide__slide--clone{
 				display: none;
 			}
-		}
-	}
+
+			.splide__list{
+				transform: none !important;
+			}
+		} 
 	@include media-breakpoint-up(xl) {}
 
 	@include media-breakpoint-up(lg) {}
