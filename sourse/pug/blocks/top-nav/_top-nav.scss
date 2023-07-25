@@ -77,7 +77,7 @@
 	@include media-breakpoint-down(lg) {
 		.row{
 			display: grid;
-			grid-template-columns: 1fr  rem(100);
+			grid-template-columns: 1fr  rem(110);
 
 		}
 		&__col{
