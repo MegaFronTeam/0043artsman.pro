@@ -5,8 +5,8 @@
 	// --sTPB: #{rem()}; 
 	// min-height: 100vh;
 	@include media-breakpoint-up(lg) {
-		--max: calc(var(--vh, 1vh) * 100 - 187px);
-		max-height: var(--max);
+		--max: calc(var(--vh, 1vh) * 100 - 187px - 80px);
+		// max-height: var(--max);
 		--sp-y: 5vh;
 	}
 	--sp-y: 18px;
@@ -18,17 +18,40 @@
 	padding-top: var(--sp-y);
 	padding-bottom: var(--sp-y);
 	&__img-wrap{
-		max-width: 936px ;
-		height: auto;
+		@include media-breakpoint-up(lg) {
+			// width: 936px ;
+			max-width: 90%;
+			max-height: calc(var(--max) -  var(--sp-y) * 2);
+		}
+		max-width: 100%;
+		// height: 446px;
 		width: auto;
 		position: relative;
 		z-index: 2;
 		margin-left: auto;
 		margin-right: auto;
-
-	}
+		@include block(446, 936);
+		// canvas,
+		// img{
+		// 	width: 100% !important;
+		// 	height: 100% !important;
+		// 	@include a-cent;
+		// }
+		canvas{
+			position: absolute;
+			left: 0;
+			top: 0;
+			// display: block;3
+			aspect-ratio: auto 936 / 446;
+			height: 100%;
+			float: left;
+			// display: inline-block;
+			// display: inline-block;
+			// height: 100%;
+			// width: 100%;
+		}
+	}	
 	img{
-		max-height: calc(var(--max) -  var(--sp-y) * 2);
 		display: block;
 		margin-left: auto;
 		margin-right: auto;
@@ -81,7 +104,7 @@
 		margin-top: 36px;
 		text-align: left;
 		@include media-breakpoint-down(lg){
-		@include rfs(40px);
+		@include rfs(48px);
 		}
 		text-transform: uppercase;
 		// white-space: nowrap;

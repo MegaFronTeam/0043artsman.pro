@@ -2,9 +2,10 @@
 mixin allcss() 
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500&display=swap" rel="stylesheet">
 	link(href="libs/@splidejs/splide/css/splide.min.css", rel="stylesheet")
 	link(href="libs/@fancyapps/ui/fancybox/fancybox.css", rel="stylesheet")
+	link(href="libs/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css", rel="stylesheet")
 	//- link(href=`css/main.min.css?v=${version}`, rel="stylesheet")
 	link(href=`css/main.min.css`, rel="stylesheet")
 
@@ -15,6 +16,12 @@ mixin allcjs()
 	script(src="libs/@splidejs/splide/js/splide.min.js")  
 	script(src="libs/inputmask/inputmask.min.js") 
 	//- script(src=`js/common.js?v=${version}`)
+	script(src="https://cdnjs.cloudflare.com/ajax/libs/three.js/96/three.min.js") 
+	script(src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js") 
+	script(src="libs/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js") 
+	script
+		include script.js
+	script(src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js") 
+	script(src="https://unpkg.com/@lottiefiles/lottie-interactivity@latest/dist/lottie-interactivity.min.js") 
 	script(src=`js/JSCCommon.js`)
-	script(src="libs/lottie-web/build/player/lottie.min.js") 
 	script(src=`js/common.js`)

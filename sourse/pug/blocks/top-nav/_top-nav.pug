@@ -19,13 +19,15 @@ mixin mob-mnu()
 	//  мобильное меню
 mixin top-nav() 
 	// start top-nav
+	
 	+b.top-nav.block-with-lazy
 		.container
 			.row
 				.col-lg-auto.d-none.d-lg-block
 				+e.col--logo.col-lg.order-lg-first
 					+e.logo(href="/" )
-						+e.animate(data-json="logo.json")
+						+e.LOTTIE-PLAYER.animate(src="logo.json" id="logo").lottie-js
+						//- +e.animate(data-json="logo.json")
 						img(src="img/logo-text.svg" alt="logo")
 				+e.col--caption.col-lg.order-lg-first
 					+e.caption Дизайн-студия Михаила Ишметова

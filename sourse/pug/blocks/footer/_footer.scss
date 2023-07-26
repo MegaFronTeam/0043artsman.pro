@@ -70,6 +70,21 @@
 	&__row{
 		min-height: rem(70);
 	}
+	&__link{
+		overflow: hidden;
+		position: relative;
+		display: inline-block;
+		height: rem(28);
+		&:not(:hover){
+			color: $secondary;
+		}
+			&:hover{
+			.link-inner{
+				transform: translateY(-100%);
+			}
+			
+		}
+	}
 // 
 @include media-breakpoint-up(xl) {}
 
@@ -103,7 +118,7 @@
 
 @include media-breakpoint-down(lg) {}
 
-@include media-breakpoint-down(md) {}
+
 
 @include media-breakpoint-down(sm) {}
 

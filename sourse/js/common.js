@@ -3,7 +3,7 @@
 const $ = jQuery;
 
 
-function eventHandler() {
+const eventHandler = new Promise((resolve, reject) => {
 
 	JSCCommon.init()
 
@@ -65,55 +65,44 @@ function eventHandler() {
 			autoStart: true,
 			pauseOnHover: false,
 			pauseOnFocus: false,
-			speed: 1,
+			speed: 1.4,
 		},
 	}).mount(window.splide.Extensions);
 	// if (window.matchMedia('(min-width: 992px)').matches) {
 
 
-// 		let slide = slider.querySelector(".swiper-slide");
-// 	for (let i = 0; i < 20; i++) {
-// 		slide.parentNode.appendChild(slide.cloneNode(true));
-// 	}
-// // }
-// 	new Swiper(slider, { // если не используешь методы 
-// 		slidesPerView: 'auto',
-// 		spaceBetween: 100, 
-// 		longSwipesMs: 0, 
-// 		slidesPerGroup: 1,
-// 		loopedSlides: 10,
-// 		roundLengths: true,
-// 		loopFillGroupWithBlank: true,
-// 		speed: 80000,
-// 		loop: true,
-// 		allowTouchMove: false, // можно ещё отключить свайп
-// 		autoplay: {
-// 			// waitForTransition: false,
-// 			delay: 0,
-// 			disableOnInteraction: false // или сделать так, чтобы восстанавливался autoplay после взаимодействия
-// 		},
+	// 		let slide = slider.querySelector(".swiper-slide");
+	// 	for (let i = 0; i < 20; i++) {
+	// 		slide.parentNode.appendChild(slide.cloneNode(true));
+	// 	}
+	// // }
+	// 	new Swiper(slider, { // если не используешь методы 
+	// 		slidesPerView: 'auto',
+	// 		spaceBetween: 100, 
+	// 		longSwipesMs: 0, 
+	// 		slidesPerGroup: 1,
+	// 		loopedSlides: 10,
+	// 		roundLengths: true,
+	// 		loopFillGroupWithBlank: true,
+	// 		speed: 80000,
+	// 		loop: true,
+	// 		allowTouchMove: false, // можно ещё отключить свайп
+	// 		autoplay: {
+	// 			// waitForTransition: false,
+	// 			delay: 0,
+	// 			disableOnInteraction: false // или сделать так, чтобы восстанавливался autoplay после взаимодействия
+	// 		},
 
-// 	});
+	// 	});
 
 
-	let animateBlocks = document.querySelectorAll('[data-json]');
-	if (animateBlocks) {
-		for (const animateBlock of animateBlocks) {
-			lottie.loadAnimation({
-				container: animateBlock, // the dom element that will contain the animation
-				// renderer: 'canvas',
-				loop: true,
-				autoplay: true,
-				path: animateBlock.dataset.json, // the path to the animation json
-			});
-		}
-	}
 
-	let links = document.querySelectorAll('.top-nav li a');
+
+	let links = document.querySelectorAll('.top-nav li a, .footer__link');
 	for (const link of links) {
-			let content = link.innerHTML;
-			link.insertAdjacentHTML('beforeend', content);
-			
+		let content = link.innerHTML;
+		link.insertAdjacentHTML('beforeend', content);
+
 	}
 
 
@@ -138,17 +127,40 @@ function eventHandler() {
 	}
 	let test = readCookie('cookie-block');
 	if (!test) document.querySelector(".cookie-block").style.display = 'block';
-};
+
+	let animateBlock = document.querySelector('.lottie-js');
+	if (animateBlock) {
+		
+		animateBlock.addEventListener("ready", () => {
+			LottieInteractivity.create({
+				player: '.lottie-js',
+				mode: "cursor",
+				actions: [{ type: "hover", forceFlag: false }]
+			});
+		});
+	}
+});
 if (document.readyState !== 'loading') {
-	eventHandler();
+	eventHandler()
 } else {
 	document.addEventListener('DOMContentLoaded', eventHandler);
 }
 
-// window.onload = function () {
-// 	document.body.classList.add('loaded_hiding');
-// 	window.setTimeout(function () {
-// 		document.body.classList.add('loaded');
-// 		document.body.classList.remove('loaded_hiding');
-// 	}, 500);
-// }
+window.onload = function () {
+	let SetScrollbar = new Promise((resolve, reject) => {
+		// $(".custom-scroll-js").mCustomScrollbar();
+	})
+	SetScrollbar
+		.then()
+		.then(
+			window.setTimeout(function () {
+				document.body.classList.add('loaded');
+				document.body.classList.remove('loaded_hiding');
+
+			}, 1000)
+		)
+		.then(  function () { 
+				
+		})
+
+}

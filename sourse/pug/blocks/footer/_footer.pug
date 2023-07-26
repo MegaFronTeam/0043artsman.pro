@@ -15,7 +15,8 @@ mixin footer()
 			+e.row.row
 				.col-lg-auto.col © 2014–2023 Михаил&nbsp;Ишметов
 				.col-lg-auto.col.order-lg-last.text-end
-					+e.link(href="#").text-body Политика конфиденциальности
+					+e.link(href="#").text-body 
+						span.link-inner Политика конфиденциальности
 				.col-lg
 					.cookie-block(style="display: none") Сайт использует cookie-файлы, чтобы сделать ваше пребывание на&nbsp;нем максимально удобным. Оставаясь на&nbsp;сайте, вы&nbsp;даете свое согласие на&nbsp;обработку персональных данных в&nbsp;соответствии&nbsp;с #[a(href="#" target="_blank") Политикой конфиденциальности].
 						+icon("close")

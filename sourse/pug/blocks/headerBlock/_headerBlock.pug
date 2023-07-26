@@ -2,8 +2,9 @@ mixin headerBlock()
 	// start headerBlock
 	+b.headerBlock#headerBlock&attributes(attributes)
 		.container
-			+e.img-wrap
-				+pic("panda-cover.jpg")
+			+e.img-wrap(data-image="img/panda-cover.jpg" data-displacement="img/4.png")
+				//- img(src="img/@2x/panda-cover.jpg", alt="").res-i
+				//- img(src="img/@2x/panda-cover.jpg", alt="")
 			+e.slider-wrap()
 				+e.slider--js(class="splide" role="group")
 					.splide__track 

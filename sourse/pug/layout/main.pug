@@ -42,12 +42,12 @@ html(lang="ru")
 						}
 					);
 			}
-	block variables
-	//- style.
-	//- 	.loaded_hiding {  opacity: 0; pointer-events: none;  } .loaded_hiding::before { display: none; }
-	//- body.loaded_hiding(class= mainPage) 
-	body(class=mainPage data-bg=bg)
-		.main-wrapper
+	block variables 
+	//- body(class=mainPage data-bg=bg)
+	body.loaded_hiding(class= mainPage )
+		//- .loader
+		#ink-cursor.ink-cursor
+		.main-wrapper().custom-scroll-js
 			block pagecontent
 				h3 content
 		
