@@ -45,6 +45,7 @@
 		position: absolute;
 		padding-left: 0;
 		z-index: 3;
+		cursor: pointer;
 		@include media-breakpoint-up(lg) {
 			
 			width: rem(84);

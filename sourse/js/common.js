@@ -58,6 +58,7 @@ const eventHandler = new Promise((resolve, reject) => {
 		drag: 'free',
 		focus: 'center',
 		// perPage: 1, 
+		gap: 50,
 		autoWidth: true,
 		items: false,
 		arrows: false,
@@ -139,6 +140,11 @@ const eventHandler = new Promise((resolve, reject) => {
 			});
 		});
 	}
+
+
+
+
+	
 });
 if (document.readyState !== 'loading') {
 	eventHandler()

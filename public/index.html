@@ -38,10 +38,10 @@
 						<div class="row">
 							<div class="col-lg-auto d-none d-lg-block"></div>
 							<div class="top-nav__col top-nav__col--logo col-lg order-lg-first">
-								<a class="top-nav__logo" href="/">
+								<div class="top-nav__logo">
 									<lottie-player class="top-nav__animate lottie-js" src="logo.json" id="logo">
-									</lottie-player><img src="img/logo-text.svg" alt="logo"/>
-								</a>
+									</lottie-player><a href="/"> <img src="img/logo-text.svg" alt="logo"/></a>
+								</div>
 							</div>
 							<div class="top-nav__col top-nav__col--caption col-lg order-lg-first">
 								<div class="top-nav__caption">Дизайн-студия Михаила Ишметова
@@ -110,11 +110,11 @@
 let hoverEffectBlock = document.querySelector('.headerBlock__img-wrap');
 new hoverEffect({
 	parent: hoverEffectBlock,
-	intensity: 0.3,
-	intensity1: 0.5,
-	intensity2: 0.5,
-	speedIn: 1,
-	speedOut: 1,
+	intensity: 0.6,
+	intensity1: 1,
+	intensity2: 1,
+	speedIn: .5,
+	speedOut: .5,
 	easing: Circ.easeOut,
 	angle: Math.PI / 4,
 	image1: hoverEffectBlock.dataset.image,
