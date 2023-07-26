@@ -69,14 +69,27 @@
 
 	&__row{
 		min-height: rem(70);
+		align-items: center;
+	}
+	&__copy{
+		@include media-breakpoint-down(sm) {
+			max-width: 150px;
+		}
+
 	}
 	&__link{
 		overflow: hidden;
 		position: relative;
 		display: inline-block;
-		height: rem(28);
+		@include media-breakpoint-up(sm) {
+			max-width: none;
+			height: rem(28);
+		}
+		height: rem(48);
+		max-width: 150px;
+		// line-height: 1.2;
 		&:not(:hover){
-			color: $secondary;
+			color: $secondary !important; 
 		}
 			&:hover{
 			.link-inner{
@@ -137,11 +150,19 @@
 	margin-left: auto;
 	margin-right: auto;
 	position: relative;
-	.icon{
+	&__close{
 		cursor: pointer;
 		position: absolute;
 		right: rem(12);
 		top: rem(12);
+		&::before{
+			content: '';
+			@include a-cent1;
+			width: 300%;
+			height: 200%;
+		}
+	}
+	.icon{
 		font-size: rem(12);
 	}
 	&::before{

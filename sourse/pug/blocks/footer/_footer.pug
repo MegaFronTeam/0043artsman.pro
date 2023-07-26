@@ -1,6 +1,6 @@
 mixin footer()
 	+b.FOOTER.footer
-		.container
+		.container-fluid
 			.row
 				.col-lg-auto
 					+e.text Создаем яркие веб-сайты и&nbsp;брендинг на&nbsp;которые обращают внимание
@@ -13,10 +13,12 @@ mixin footer()
 				span.btn__bg
 				| Смотреть проекты
 			+e.row.row
-				.col-lg-auto.col © 2014–2023 Михаил&nbsp;Ишметов
+				.col-lg-auto.col
+					+e.copy © 2014–2023 Михаил&nbsp;Ишметов
 				.col-lg-auto.col.order-lg-last.text-end
 					+e.link(href="#").text-body 
 						span.link-inner Политика конфиденциальности
 				.col-lg
-					.cookie-block(style="display: none") Сайт использует cookie-файлы, чтобы сделать ваше пребывание на&nbsp;нем максимально удобным. Оставаясь на&nbsp;сайте, вы&nbsp;даете свое согласие на&nbsp;обработку персональных данных в&nbsp;соответствии&nbsp;с #[a(href="#" target="_blank") Политикой конфиденциальности].
-						+icon("close")
+					+b.cookie-block(style="display: none") Сайт использует cookie-файлы, чтобы сделать ваше пребывание на&nbsp;нем максимально удобным. Оставаясь на&nbsp;сайте, вы&nbsp;даете свое согласие на&nbsp;обработку персональных данных в&nbsp;соответствии&nbsp;с #[a(href="#" target="_blank") Политикой конфиденциальности].
+						+e.close
+							+icon("close")

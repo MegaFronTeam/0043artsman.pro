@@ -106,7 +106,7 @@ const eventHandler = new Promise((resolve, reject) => {
 	}
 
 
-	$(document).on('click', ".cookie-block .icon", function () {
+	$(document).on('click', ".cookie-block__close", function () {
 
 		writeCookie('cookie-block', 'hide', 30);
 		$(document.querySelector(".cookie-block")).fadeOut();

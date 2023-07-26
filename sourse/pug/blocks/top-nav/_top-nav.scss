@@ -7,7 +7,7 @@
 		padding-top: rem(2);
 	}
 }
-	.container{
+	.container-fluid{
 		position: relative;
 	}
 	@include media-breakpoint-up(md) {
@@ -47,10 +47,10 @@
 		z-index: 3;
 		@include media-breakpoint-up(lg) {
 			
-			width: rem(80);
-			height: rem(80);
+			width: rem(84);
+			height: rem(84);
 			@include a-cent1(x);
-			margin-top: rem(-11);
+			margin-top: rem(-13);
 		}
 		@include media-breakpoint-down(lg) {
 			@include a-cent1(y);
@@ -86,7 +86,7 @@
 		color: $secondary;
 		line-height: 125%;
 		max-width: rem(160);
-		margin-bottom: rem(14);
+		margin-bottom: rem(16);
 		@include media-breakpoint-up(lg) {
 			margin-top: rem(-2);
 		}
